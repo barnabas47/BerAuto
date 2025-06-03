@@ -1,0 +1,134 @@
+/* Black, white, and purple theme */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #111;
+  margin: 0;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #fff;
+}
+
+a {
+  color: #b388ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #7c4dff;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin: 0 4px;
+  background: #7c4dff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(124, 77, 255, 0.08);
+}
+button:disabled {
+  background: #444;
+  cursor: not-allowed;
+}
+button:hover:not(:disabled) {
+  background: #b388ff;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1.5px solid #222;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  background: #181818;
+  color: #fff;
+  transition: border 0.2s;
+  margin-right: 12px;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #b388ff;
+  outline: none;
+}
+
+.card {
+  background: #181818;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(124,77,255,0.10);
+  padding: 24px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.error {
+  color: #fff;
+  background: #7c4dff;
+  border: 1px solid #b388ff;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+}
+
+.success {
+  color: #fff;
+  background: #388e3c;
+  border: 1px solid #b388ff;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 12px;
+  }
+  button {
+    width: 100%;
+    margin: 6px 0;
+  }
+  input, select, textarea {
+    margin-right: 0;
+  }
+}
+
+/* RentalRequestPage: form box margin-top */
+.rental-request-form-box {
+  margin-top: 16px;
+}
+
+/* ProfilePage: input right margin fix */
+.profile-input-row input,
+.profile-input-row select {
+  margin-right: 18px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-input-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+/* LoginPage: input right margin fix */
+.login-input {
+  margin-right: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* RentalRequestPage: car card width fix */
+.rental-car-card {
+  min-width: 260px !important;
+  max-width: 320px !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
