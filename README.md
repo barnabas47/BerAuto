@@ -1,15 +1,69 @@
-<h1 align="center" id="title">BérAutó</h1>
+# BerAuto
 
-<h2>Start with docker:</h2>
+**BerAuto** egy modern, teljes stack autókölcsönző rendszer, amely .NET 8 (ASP.NET Core) backendből és React + TypeScript frontendből áll. A projekt célja egy valósághű, több szerepkörös (ügyfél, alkalmazott, admin) autóbérlési platform megvalósítása.
 
-<p>1. Install docker engine</p>
-<p>2. Build the dockerfile: "docker build -t berauto-app:latest -f BerAuto/Dockerfile ."</p>
-<p>3. Start the container: "docker run -d -p 8080:8080 --name berauto-container -e "ASPNETCORE_URLS=http://+:8080" -e "ConnectionStrings__DefaultConnection=Server=host.docker.internal,1433;Database=CarRentalDB;User Id=admin;Password=test123;TrustServerCertificate=True" berauto-app:latest"</p>
+## Főbb funkciók
 
-<h2>Start with docker compose:</h2>
-<p>1. Install docker engine</p>
+- **Autók listázása, szűrése, kategóriák kezelése**
+- **Felhasználói regisztráció, bejelentkezés, jogosultságkezelés (JWT)**
+- **Bérlési igény leadása, bérlések kezelése (ügyfél, alkalmazott, admin nézet)**
+- **Adminisztráció: autók, kategóriák, felhasználók, jogosultságok kezelése**
+- **Alkalmazotti panel: bérlések jóváhagyása/elutasítása, átadás/visszavétel, számlagenerálás**
+- **Profilkezelés, címkezelés**
+- **Reszponzív, letisztult, fekete-fehér-lila színvilágú UI**
 
-<p>2. Edit docker-compose.yml in the BerAuto directory(change connection string)</p>
+## Technológiák
 
-<p>3. docker-compose up</p>
+- **Backend:** ASP.NET Core 8, Entity Framework Core, REST API, JWT autentikáció
+- **Frontend:** React, TypeScript, React Router, Context API, modern CSS
+- **Adatbázis:** MSSQL (EF migrációk, tesztadatok)
+- **Egyéb:** Docker támogatás, többkörös jogosultság, letisztult kódstruktúra
+
+## Futtatás
+
+### Backend
+
+1. Lépj be a `BerAuto` mappába.
+2. Indítsd el az ASP.NET Core szervert:
+   ```sh
+   dotnet run
+   ```
+   vagy Visual Studio-ban F5.
+
+### Frontend
+
+1. Lépj be a `berauto-frontend` mappába.
+2. Telepítsd a függőségeket:
+   ```sh
+   npm install
+   ```
+3. Indítsd el a fejlesztői szervert:
+   ```sh
+   npm start
+   ```
+4. Az alkalmazás elérhető: [http://localhost:3000](http://localhost:3000)
+
+## Felhasználói szerepkörök
+
+- **Vendég:** autók böngészése, bérlési igény leadása
+- **Ügyfél:** saját bérlések, profil, bérlési igény
+- **Alkalmazott:** bérlések kezelése, átadás/visszavétel, számlázás
+- **Admin:** autók, kategóriák, felhasználók, jogosultságok teljes körű kezelése
+
+## Főbb mappák
+
+- `BerAuto/` – ASP.NET Core backend (Controllers, Entities, Dtos, Service, DataContext)
+- `berauto-frontend/` – React + TypeScript frontend (src/pages, src/components, src/global.css)
+- `BerAuto.DataContext/` – EF migrációk, adatbázis modellek
+
+## Fejlesztői információk
+
+- A frontend és backend külön-külön is futtatható.
+- A projekt reszponzív, mobilbarát, letisztult UI-t használ.
+- A jogosultságkezelés Context API-n és JWT-n alapul.
+- A backend REST API-k dokumentáltak, a frontend minden végpontot használ.
+
+## Képernyőképek
+
+*(Ide illeszthetsz screenshotokat a főbb oldalakról, ha szeretnéd.)*
 
