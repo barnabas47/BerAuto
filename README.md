@@ -1,3 +1,5 @@
+Please note: The English version of the project description can be found at the end of this document.
+
 # BerAuto
 
 **BerAuto** egy modern autókölcsönző rendszer, amely .NET 9 (ASP.NET Core) backendből és React + TypeScript frontendből áll. A projekt célja egy valósághű, több szerepkörös (ügyfél, alkalmazott, admin) autóbérlési platform megvalósítása.
@@ -68,3 +70,62 @@
 ![image](https://github.com/user-attachments/assets/ed8ac175-3267-44e0-b587-0af2b6d75280)
 
 
+# BerAuto
+
+**BerAuto** is a modern car rental system consisting of a .NET 9 (ASP.NET Core) backend and a React + TypeScript frontend. The goal of the project is to implement a realistic, multi-role (customer, employee, admin) car rental platform.
+
+## Main Features
+
+- **Car listing, filtering, category management**
+- **User registration, login, role-based access control (JWT)**
+- **Rental request submission, rental management (customer, employee, admin views)**
+- **Administration: manage cars, categories, users, roles**
+- **Employee panel: approve/reject rentals, handover/return, invoice generation**
+- **Profile management, address handling**
+- **Responsive, clean UI with black-white-purple color scheme**
+
+## Technologies
+
+- **Backend:** ASP.NET Core 9, Entity Framework Core, REST API, JWT authentication
+- **Frontend:** React, TypeScript, React Router, Context API, modern CSS
+- **Database:** MSSQL (EF migrations, test data)
+- **Other:** Docker support, multi-level authorization, clean code structure
+
+## Running the Project
+
+### Backend
+
+1. Navigate to the `BerAuto` folder.
+2. Start the ASP.NET Core server:
+   ```sh
+   dotnet run
+   ```
+   or press F5 in Visual Studio.
+
+### Frontend
+
+1. Navigate to the `berauto-frontend` folder.
+2. Install dependencies:
+   ```sh
+   npm install
+3. Start the development server:
+   ```sh
+   npm start
+   ```
+4. The app will be available at: http://localhost:3000
+
+## User Roles
+
+- **Guest:** browse cars, submit rental requests
+- **Customer:** view own rentals, profile, rental requests
+- **Employee:** manage rentals, handover/return, invoicing
+- **Admin:** full management of cars, categories, users, roles
+
+---
+
+## Developer Notes
+
+- Frontend and backend can run independently.
+- The project uses a responsive, clean UI.
+- Role management is based on Context API and JWT.
+- Backend REST APIs are documented, and the frontend uses all endpoints.
